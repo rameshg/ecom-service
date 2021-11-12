@@ -1,5 +1,9 @@
 version: 0.2
 
+env:
+  secrets-manager:
+    Password: "Docker-Cred:PASSWORD"
+    Username: "Docker-Cred:USER_NAME"
 phases:
   install:
     runtime-versions:
@@ -9,7 +13,7 @@ phases:
   pre_build:
    commands: 
       - echo Docker Login
-      - docker login --username securetest1 --password Arseetha@12
+      - docker login --username $Username --password $Password
    finally:
       - echo The scan is completed 
  
