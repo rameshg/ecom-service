@@ -14,7 +14,7 @@ phases:
       - echo Scan Initiated
       - docker login --username $USER_NAME --password $PASSWORD
       - docker pull securetest1/brakeman
-      - docker run brakeman:latest 
+      - echo Docker Image Pulled Successfully 
     finally:
       - echo The scan is completed 
  
