@@ -5,8 +5,6 @@ env:
     APP_ID: a040441301daa0781830f3f1a020a98132503cfa5a8ae1095483485eb6f89daf
 phases:
   install:
-    runtime-versions:
-      powershell:7.0.2
     commands:
       - echo Using Powershell version 7.0.2
  
