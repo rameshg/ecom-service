@@ -1,6 +1,5 @@
 version: 0.2
 
-- echo Securin Scan
 env:
   variables:
     APP_ID: a040441301daa0781830f3f1a020a98132503cfa5a8ae1095483485eb6f89daf
