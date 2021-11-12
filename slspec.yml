@@ -9,7 +9,7 @@ phases:
       - echo Using Powershell version 7.0.2
   pre_build:
    commands: 
-      - Build with Maven
+      - echo Build with Maven
       - mvn --batch-mode --update-snapshots verify
       - echo Scan Initiated
       - docker login --username $USER_NAME --password $PASSWORD
