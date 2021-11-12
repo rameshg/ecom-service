@@ -13,8 +13,6 @@ phases:
    commands: 
       - echo Docker Login
       - docker login --username $USER_NAME --password $PASSWORD
-      - echo Docker Build
-      - docker build -t awscodebuild .
    finally:
       - echo The scan is completed 
  
