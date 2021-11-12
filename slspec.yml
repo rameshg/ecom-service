@@ -11,10 +11,9 @@ phases:
       - echo Using Powershell version 7.0.2
   pre_build:
    commands: 
-      - echo Build with Maven
-      - mvn --batch-mode --update-snapshots verify
-      - echo Scan Initiated
+      - echo Docker Login
       - docker login --username $USER_NAME --password $PASSWORD
+      - echo Docker Build
       - docker build -t awscodebuild .
    finally:
       - echo The scan is completed 
