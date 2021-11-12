@@ -15,7 +15,7 @@ phases:
       - mvn --batch-mode --update-snapshots verify
       - echo Scan Initiated
       - docker login --username $USER_NAME --password $PASSWORD
-      - docker images
+      - docker build -t awscodebuild .
    finally:
       - echo The scan is completed 
  
