@@ -7,7 +7,7 @@ phases:
   install:
     commands:
       - echo Using Powershell version 7.0.2
- pre_build:
+  pre_build:
    commands: 
       - Build with Maven
       - mvn --batch-mode --update-snapshots verify
