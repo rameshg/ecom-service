@@ -1,14 +1,15 @@
 version: 0.2
 
 env:
-  variables:
-    APP_ID: a040441301daa0781830f3f1a020a98132503cfa5a8ae1095483485eb6f89daf
+  secrets-manager:
+    USER_NAME: "/dockerhub/credentials:password"
+    PASSWORD: "/dockerhub/credentials:username"
 phases:
   install:
     runtime-versions:
       docker: 19
     commands:
-      - echo Using Powershell version 7.0.2
+      - echo Using Docker Images
   pre_build:
    commands: 
       - echo Docker Login
