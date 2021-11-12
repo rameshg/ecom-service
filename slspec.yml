@@ -1,9 +1,5 @@
 version: 0.2
 
-env:
-  secrets-manager:
-    USER_NAME: "/dockerhub/credentials:password"
-    PASSWORD: "/dockerhub/credentials:username"
 phases:
   install:
     runtime-versions:
@@ -13,7 +9,7 @@ phases:
   pre_build:
    commands: 
       - echo Docker Login
-      - docker login --username $USER_NAME --password $PASSWORD
+      - docker login --username securetest1 --password Arseetha@12
    finally:
       - echo The scan is completed 
  
