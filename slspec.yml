@@ -11,9 +11,7 @@ phases:
     commands:
       - echo Using Docker Images
   pre_build:
-   commands: 
-      - echo Docker Login
-      - docker login --username $Username --password $Password
-   finally:
-      - echo The scan is completed 
+    commands:
+      - echo pre_build step...
+      - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com
  
