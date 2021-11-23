@@ -1,20 +1,6 @@
-version: 0.2
-
-env:
-  secrets-manager:
-    Password: "Docker-Cred:PASSWORD"
-    Username: "Docker-Cred:USER_NAME"
+version: 0.1
 phases:
-  install:
-    runtime-versions:
-      docker: 19
-    commands:
-      - echo "Quitting build installations." 
   pre_build:
     commands:
-      - echo "Executing pre_build steps..." && exit 1
-  build:
-    commands:
-      - echo "Executing build steps.."
-     
- 
+      - "echo Logging in to Docker Hub..."
+      - "docker login --username=\"securetest1\" --password=\"Arseetha@12\""
