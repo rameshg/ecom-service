@@ -10,7 +10,7 @@ phases:
       docker: 19
     commands:
       - echo Using Docker Images
-      - exit status 1
+      - exit
   pre_build:
     commands:
       - echo pre_build step...
