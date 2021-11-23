@@ -9,9 +9,12 @@ phases:
     runtime-versions:
       docker: 19
     commands:
-      - echo "Quitting build installations." && exit 1
+      - echo "Quitting build installations." 
   pre_build:
     commands:
-      - echo pre_build step...
+      - echo "Executing pre_build steps..." && exit 1
+  build:
+    commands:
+      - echo "Executing build steps.."
      
  
